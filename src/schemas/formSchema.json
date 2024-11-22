@@ -1,0 +1,67 @@
+{
+    "fields": [
+      {
+        "type": "text",
+        "label": "Name",
+        "key": "name",
+        "placeholder": "Enter your full name",
+        "validation": {
+            "required": true,
+            "minLength": 3,
+            "maxLength": 50
+          }
+      },
+      {
+        "type": "number",
+        "label": "Age",
+        "key": "age",
+        "placeholder": "Enter your age",
+        "validation": {
+          "required": true,
+          "min": 0,
+          "max": 120
+        }
+      },
+      {
+        "type": "checkbox",
+        "label": "Are you a student?",
+        "key": "isStudent",
+        "validation": {
+          "required": false
+        }
+      },
+      {
+        "type": "text",
+        "label": "School Name",
+        "key": "schoolName",
+        "placeholder": "Enter your school name",
+        "validation": {
+            "required": true
+        },
+        "conditional": {
+          "key": "isStudent",
+          "value": true
+        }
+      },
+      {
+        "type": "dropdown",
+        "label": "Favorite Subject",
+        "key": "favoriteSubject",
+        "options": ["Math", "Science", "History"],
+        "validation": {
+          "required": true
+        }
+      },
+      {
+        "key": "email",
+        "type": "text",
+        "label": "Email",
+        "placeholder": "Enter your email",
+        "validation": {
+          "required": true,
+          "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+        }
+      }
+    ]
+  }
+  
